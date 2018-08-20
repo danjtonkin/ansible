@@ -1,0 +1,17 @@
+[csgo_servers]
+192.168.1.60
+
+[tf2_servers]
+192.168.1.50
+
+[l4d2_servers]
+192.168.1.40
+
+[dod_servers]
+192.168.1.30
+
+[lan_servers]
+csgo_servers
+tf2_servers
+l4d2_servers
+dod_servers

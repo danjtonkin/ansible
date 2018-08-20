@@ -1,0 +1,26 @@
+---
+- name: Set authorized key took from url
+  authorized_key:
+    user: pi
+    state: present
+    key: https://s3-us-west-2.amazonaws.com/keys-us-west-2.dtonkin.net/pi_ssh.pub
+
+- name: update the apt package index
+  apt:
+    update_cache: yes
+  when: ansible_pkg_mgr == "apt"
+
+- name: Upgrade all packages to the latest version
+  apt:
+    name: "*"
+    state: latest
+
+- name: Install a list of packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - tmux
+    - python
+    - aws-cli
+    

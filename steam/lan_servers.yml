@@ -1,0 +1,12 @@
+- hosts: lan_servers
+  roles:
+    - steamcmd
+    
+- hosts: csgo_servers
+
+- hosts: l4d2_servers
+
+- hosts: dod_servers
+
+- hosts: tf2_servers
+  

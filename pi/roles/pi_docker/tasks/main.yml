@@ -1,0 +1,10 @@
+---
+- name: Install curl
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - curl
+
+- name: setup docker for raspberry pi
+  script: ccurl -sSL https://get.docker.com | sh
